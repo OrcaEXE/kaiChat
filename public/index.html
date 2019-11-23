@@ -11,6 +11,26 @@
 </form>
 <button value="send" onclick="myFunction()">send
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDyyS9Uan_Qr0zq8De7IqnDaQAf8ae6RSE",
+    authDomain: "kaichat-12f67.firebaseapp.com",
+    databaseURL: "https://kaichat-12f67.firebaseio.com",
+    projectId: "kaichat-12f67",
+    storageBucket: "kaichat-12f67.appspot.com",
+    messagingSenderId: "1395893401",
+    appId: "1:1395893401:web:88b460155a379d95718408"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 
 <script>
     var messages = [""];
