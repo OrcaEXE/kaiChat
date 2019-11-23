@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<h2>
+  Welcome 2 KaiChat 
+</h2>
+
+<p id="messages">
+</p>
+<form id="kaiChatDisplay">
+  <input id="name" type="text" placeholder = "name"> <br>
+  <input id="message" type="text" placeholder = "enter your text here">
+</form>
+<button value="send" onclick="myFunction()">send
+
+
+<script>
+    var messages = [""];
+    function myFunction() {
+      var x = document.getElementById("kaiChatDisplay");
+      var temp = getTime();
+      var text = temp + " ";
+        text += x.elements[0].value + ": ";
+        text += x.elements[1].value;
+      text += "<br>";
+      document.getElementById("messages").innerHTML += text;
+      messages.push(text);
+      document.getElementById('message').value = '';
+      document.getElementById('message').placeholder = "enter your text here";
+    }
+
+    function getTime ()
+    {
+      var d = new Date();
+      var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      var formattedTime = months[d.getMonth()] + " " + d.getDate() + " " + d.getHours() + ":" + d.getMinutes(); 
+      return formattedTime;
+    }
+    </script>
